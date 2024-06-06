@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faSun, faMoon, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faSun, faMoon, faArrowRight, faXmark } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <template>
@@ -28,10 +28,10 @@ import { faSun, faMoon, faArrowRight } from '@fortawesome/free-solid-svg-icons'
         </div>
         <button id="accessibility-menu-btn" class="w-12 h-12 float-right bg-emerald-500 rounded-r-full transition-colors hover:bg-amber-300 hover:text-sky-400" aria-label="Toggle accessibility menu">
             <div id="open-accessibility-arrow-icon">
-                <FontAwesomeIcon :icon="faArrowRight" />
+                <FontAwesomeIcon :icon="faArrowRight" size="lg" />
             </div>
             <div id="close-accessibility-xmark-icon" class="hidden">
-                <i class="fa-solid fa-xmark fa-xl"></i>
+                <FontAwesomeIcon :icon="faXmark" size="lg" />
             </div>
         </button>
     </div>

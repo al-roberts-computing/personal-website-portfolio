@@ -1,4 +1,5 @@
 import './assets/main.css'
+import './assets/custom-func-main.js'
 
 import { createApp } from 'vue'
 import App from './App.vue'

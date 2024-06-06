@@ -21,6 +21,8 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "gsap": "^3.12.5",
+    "tw-elements": "^1.0.0-beta3",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
