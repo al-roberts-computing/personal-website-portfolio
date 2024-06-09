@@ -2,9 +2,8 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 </script>
-
-Script
 
 <template>
     <!-- main navigation -->
@@ -21,7 +20,7 @@ Script
         </a>
 
         <!-- hamburger button for mobile/tablet view -->
-        <button id="toggle-menu" class="block border-0 bg-transparent px-2 text-neutral-500 group select-none hover:no-underline dark:text-neutral-200 lg:hidden" type="button" data-te-collapse-init data-te-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="toggle-menu" class="block border-0 bg-transparent px-2 text-neutral-500 group select-none hover:no-underline dark:text-neutral-200 lg:hidden" type="button" data-te-collapse-init data-te-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation" @click="toggleHamburgerMenuAnimation();">
             <!-- Hamburger icon -->
             <!--
                 Hamburger partially inspired by Obaseki Noruwa, on DEV
@@ -76,13 +75,9 @@ Script
                     Available at: https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite/
                     Accessed: 14/08/2023
                 -->
-                <button id="nav-toggle-dark-mode" class="rounded-full bg-blue-300 w-8 h-8 border-none" aria-label="Toggle dark mode">
-                    <div id="nav-theme-toggle-light-icon">
-                        <i class="fa-solid fa-sun"></i>
-                    </div>
-                    <div id="nav-theme-toggle-moon-icon">
-                        <i class="fa-solid fa-moon"></i>
-                    </div>
+                <button id="nav-toggle-dark-mode" class="rounded-full bg-blue-300 w-8 h-8 border-none dark:float-right" aria-label="Toggle dark mode" @click="toggleDarkMode();">
+                    <FontAwesomeIcon id="nav-theme-toggle-light-icon" class="block mx-auto dark:hidden" :icon="faSun" />
+                    <FontAwesomeIcon id="nav-theme-toggle-moon-icon" class="hidden mx-auto dark:block" :icon="faMoon" />
                 </button>
             </div>
         </div>
@@ -92,3 +87,48 @@ Script
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 </template>
+
+<script lang="ts">
+// Initialization for ES Users
+import {
+    Collapse,
+    initTE,
+} from "tw-elements";
+
+initTE({ Collapse });
+
+// ScrollTrigger - part of GSAP
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".custom-back-to-top", {
+    scrollTrigger: {
+        trigger: ".back-to-top-trigger",
+        start: "190px 10%",
+        toggleActions: "restart none none reverse",
+    },
+    scale: 2,
+    display: "block",
+    duration: 0.5,
+});
+
+const toggleDarkMode = () => {
+    document.documentElement.classList.toggle('dark');
+    document.body.classList.add('transition-colours', 'duration-300');
+}
+
+const toggleHamburgerMenuAnimation = () => {
+    (document.querySelector('#toggle-menu') as HTMLInputElement)?.classList.toggle('hamburger-toggle');
+}
+
+window.addEventListener('resize', function() {
+    if ((document.querySelector('#toggle-menu') as HTMLInputElement)?.classList.contains('hamburger-toggle')) {
+        (document.querySelector('#toggle-menu') as HTMLInputElement)?.click();
+    }
+    
+    if ((document.querySelector('#close-accessibility-xmark-icon') as HTMLInputElement)?.classList.contains('hidden') === false) {
+        (document.querySelector('#accessibility-menu-btn') as HTMLInputElement).click();
+    }
+});
+</script>
