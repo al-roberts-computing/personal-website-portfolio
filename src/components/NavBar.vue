@@ -1,8 +1,14 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
+
+onMounted(async () => {
+  const { Collapse, initTWE } = await import("tw-elements");
+  initTWE({ Collapse });
+});
 </script>
 
 <template>
@@ -20,7 +26,7 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
         </a>
 
         <!-- hamburger button for mobile/tablet view -->
-        <button id="toggle-menu" class="block border-0 bg-transparent px-2 text-neutral-500 group select-none hover:no-underline dark:text-neutral-200 lg:hidden" type="button" data-te-collapse-init data-te-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation" @click="toggleHamburgerMenuAnimation();">
+        <button id="toggle-menu" class="block border-0 bg-transparent px-2 text-neutral-500 group select-none hover:no-underline dark:text-neutral-200 lg:hidden" type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation" @click="toggleHamburgerMenuAnimation();">
             <!-- Hamburger icon -->
             <!--
                 Hamburger partially inspired by Obaseki Noruwa, on DEV
@@ -32,7 +38,7 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
             <div class="w-8 h-1 mt-2 bg-black rounded-full ease-in-out duration-150 group-hover:bg-slate-50"></div>
         </button>
 
-        <div class="!visible hidden item-center w-full lg:w-auto lg:!flex lg:flex-grow-0" id="navbarSupportedContent2" data-te-collapse-item>
+        <div class="!visible hidden item-center w-full lg:w-auto lg:!flex lg:flex-grow-0" id="navbarSupportedContent2" data-twe-collapse-item>
             <!-- hyperlinks to other pages -->
             <ul class="flex flex-col lg:flex-row text-xl text-neutral-500 lg:ml-1">
                 <li class="list-item self-start ml-10 mt-2 lg:self-center lg:ml-2 lg:me-4 lg:my-0 lg:py-0">
@@ -89,14 +95,6 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 </template>
 
 <script lang="ts">
-// Initialization for ES Users
-import {
-    Collapse,
-    initTE,
-} from "tw-elements";
-
-initTE({ Collapse });
-
 // ScrollTrigger - part of GSAP
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';

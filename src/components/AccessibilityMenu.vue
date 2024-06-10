@@ -24,10 +24,10 @@ import { faSun, faMoon, faArrowRight, faXmark } from '@fortawesome/free-solid-sv
         </div>
         <button id="accessibility-menu-btn" class="w-12 h-12 float-right bg-emerald-500 rounded-r-full transition-colors hover:bg-amber-300 hover:text-sky-400" aria-label="Toggle accessibility menu" @click="toggleAccessibilityMenu">
             <div id="open-accessibility-arrow-icon">
-                <FontAwesomeIcon :icon="faArrowRight" size="lg" />
+                <FontAwesomeIcon :icon="faArrowRight" size="xl" />
             </div>
             <div id="close-accessibility-xmark-icon" class="hidden">
-                <FontAwesomeIcon :icon="faXmark" size="lg" />
+                <FontAwesomeIcon :icon="faXmark" size="xl" />
             </div>
         </button>
     </div>
@@ -35,8 +35,6 @@ import { faSun, faMoon, faArrowRight, faXmark } from '@fortawesome/free-solid-sv
 
 <script lang="ts">
 // set dark mode based on system preference
-// console.log(localStorage);
-// console.log(window.matchMedia('(prefers-color-scheme:dark)').matches);
 if(
   localStorage.getItem('color-theme') === 'dark' ||
   (!('color-theme' in localStorage) &&
