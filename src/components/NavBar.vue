@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
+import { RouterLink } from 'vue-router';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -20,10 +21,10 @@ onMounted(async () => {
             Accessed: 15/06/2023
         -->
         <!-- logo and name -->
-        <a class="text-xl text-neutral-500 h-max select-none flex flex-nowrap items-center px-2 py-5 lg:rounded-b-lg lg:px-2 lg:ml-0 dark:text-neutral-100 hover:bg-orange-600" href="/" title="Home">
+        <RouterLink to="/" class="text-xl text-neutral-500 h-max select-none flex flex-nowrap items-center px-2 py-5 lg:rounded-b-lg lg:px-2 lg:ml-0 dark:text-neutral-100 hover:bg-orange-600" href="/" title="Home">
             <img src="/favicon.png" height="48px" width="48px" alt="logo" />
             <span class="mx-2">Alexander Roberts</span>
-        </a>
+        </RouterLink>
 
         <!-- hamburger button for mobile/tablet view -->
         <button id="toggle-menu" class="block border-0 bg-transparent px-2 text-neutral-500 group select-none hover:no-underline dark:text-neutral-200 lg:hidden" type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation" @click="toggleHamburgerMenuAnimation();">
@@ -42,14 +43,14 @@ onMounted(async () => {
             <!-- hyperlinks to other pages -->
             <ul class="flex flex-col lg:flex-row text-xl text-neutral-500 lg:ml-1">
                 <li class="list-item self-start ml-10 mt-2 lg:self-center lg:ml-2 lg:me-4 lg:my-0 lg:py-0">
-                    <a class="hover:text-lime-400 py-5 select-none dark:text-neutral-100" href="" title="About me page" aria-label="Have a look at my story.">
+                    <RouterLink to="/about-me" class="hover:text-lime-400 py-5 select-none dark:text-neutral-100" href="" title="About me page" aria-label="Have a look at my story.">
                         about me
-                    </a>
+                    </RouterLink>
                 </li>
                 <li class="list-item self-start ml-10 my-8 lg:self-center lg:mx-4 lg:ml-0 lg:my-0 lg:py-0">
-                    <a class="hover:text-lime-400 py-5 select-none dark:text-neutral-100" href="" title="My projects" aria-label="Have a look at my projects completed and in progress.">
+                    <RouterLink to="/projects" class="hover:text-lime-400 py-5 select-none dark:text-neutral-100" href="" title="My projects" aria-label="Have a look at my projects completed and in progress.">
                         projects
-                    </a>
+                    </RouterLink>
                 </li>
             </ul>
             <!-- social media icons -->

@@ -7,7 +7,7 @@ Script
 
 <template>
     <footer>
-        <div class="w-full flex justify-between items-center bg-green-700 flex-col md:flex-row md:px-14">
+        <div class="w-full flex justify-between items-center bg-green-700 flex-col md:flex-row md:px-12">
             <div class="py-4">
                 <span class="text-xl text-gray-100">Contact Me</span>
                 <ul class="[&>li]:py-1 [&>li>a:hover]:text-yellow-100 text-lg">
@@ -22,7 +22,7 @@ Script
                     </li>
                 </ul>
             </div>
-            <span class="my-6 [&>a:hover]:text-slate-300">
+            <span class="my-6 [&>a:hover]:text-slate-300 px-6">
                 <a class="text-xl pe-3 md:ps-2 border-r-[1px]" href="{{url('/terms-and-conditions')}}">Terms of Use</a>
                 <a class="text-xl pe-3 ps-2 border-r-[1px]" href="{{url('/about-me')}}">About Me</a>
                 <a class="text-xl ps-2" href="{{url('/projects')}}">Projects</a>
