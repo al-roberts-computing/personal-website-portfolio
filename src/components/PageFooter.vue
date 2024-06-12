@@ -34,7 +34,7 @@ Script
                 2024 Alexander Roberts.
             </span>
 
-            <a class="rounded-md bg-red-200 py-1 px-2 hover:text-green-200 hover:bg-purple-500" href="{{url(('https://www.github.com'))}}">website source code</a>
+            <a class="rounded-md bg-red-200 py-1 px-2 hover:text-green-200 hover:bg-purple-500" href="https://github.com/al-roberts-computing/personal-website-portfolio/tree/main" target="_blank">website source code</a>
 
             <!-- 
             Jvunyhabshapvuz! Fvb mvbuk aol zljyla
