@@ -5,5 +5,6 @@ import TemporaryMsg from '@/components/TemporaryMsg.vue';
 <template>
   <main class="mx-0 md:mx-12 dark:text-neutral-100 mb-3">
     <TemporaryMsg />
+    <p v-for="n in 30" :key="n">{{ n }}</p>
   </main>
 </template>

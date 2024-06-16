@@ -2,13 +2,27 @@
 import { onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 
 onMounted(async () => {
-  const { Collapse, initTWE } = await import("tw-elements");
-  initTWE({ Collapse });
+    const { Collapse, initTWE } = await import("tw-elements");
+    const { gsap } = await import("gsap");
+    const { ScrollTrigger } = await import("gsap/all");
+
+    initTWE({ Collapse });
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".custom-back-to-top", {
+        scrollTrigger: {
+            trigger: ".back-to-top-trigger",
+            start: "190px 10%",
+            toggleActions: "restart none none reverse",
+        },
+        scale: 2,
+        display: "block",
+        duration: 0.4,
+    });
 });
 </script>
 
@@ -90,28 +104,12 @@ onMounted(async () => {
         </div>
     </nav>
 
-    <button id="to-top-btn" class="custom-back-to-top hidden fixed bottom-9 right-8 w-6 h-6 rounded-full opacity-50 transition-colors bg-cyan-100 hover:opacity-100 hover:bg-orange-300 hover:text-slate-100" aria-label="Go back to top">
-        <i class="fa-solid fa-arrow-up"></i>
+    <button id="to-top-btn" class="custom-back-to-top hidden fixed bottom-9 right-8 w-6 h-6 rounded-full opacity-70 transition-colors bg-cyan-100 hover:opacity-100 hover:bg-orange-300 hover:text-slate-100" aria-label="Go back to top" @click="windowToTop();">
+        <FontAwesomeIcon class="block mx-auto dark:hidden" :icon="faArrowUp" />
     </button>
 </template>
 
 <script lang="ts">
-// ScrollTrigger - part of GSAP
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to(".custom-back-to-top", {
-    scrollTrigger: {
-        trigger: ".back-to-top-trigger",
-        start: "190px 10%",
-        toggleActions: "restart none none reverse",
-    },
-    scale: 2,
-    display: "block",
-    duration: 0.5,
-});
-
 const toggleDarkMode = () => {
     document.documentElement.classList.toggle('dark');
     document.body.classList.add('transition-colours', 'duration-300');
@@ -119,6 +117,11 @@ const toggleDarkMode = () => {
 
 const toggleHamburgerMenuAnimation = () => {
     (document.querySelector('#toggle-menu') as HTMLInputElement)?.classList.toggle('hamburger-toggle');
+}
+
+const windowToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 window.addEventListener('resize', function() {
