@@ -59,7 +59,7 @@ npm run lint
 ```
 ### Update TailwindCSS classes in use (only once)
 
-Any changes to the TailwindCSS classes would need this command so the main CSS file is updated (by adding the new or remove the deleted classes).
+Any changes to the TailwindCSS classes would need this command so the main CSS file is updated:
 
 ```sh
 npx tailwindcss -i ./src/assets/base.css -o ./src/assets/main.css
@@ -67,7 +67,7 @@ npx tailwindcss -i ./src/assets/base.css -o ./src/assets/main.css
 
 ### Update TailwindCSS classes in use (watch for changes)
 
-Similar to the command above, but runs automatically once a file has been saved - saves having to keep repeating the command above during development.
+Similar to the command above, but runs automatically once a file has been saved - saves having to keep repeating the command above during development:
 
 ```sh
 npx tailwindcss -i ./src/assets/base.css -o ./src/assets/main.css --watch
