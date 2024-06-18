@@ -72,3 +72,16 @@ Similar to the command above, but runs automatically once a file has been saved 
 ```sh
 npx tailwindcss -i ./src/assets/base.css -o ./src/assets/main.css --watch
 ```
+
+## Uploading to a online sharded hosting service
+
+1. Build the project:
+```sh
+npm run build
+```
+
+2. Zip the resulting 'dist' folder.
+
+3. Upload zipped folder to hosting service public access location (e.g., 'public_html'), then extract contents. Ensure the contents are no longer in the 'dist' folder.
+
+4. OPTIONAL: It may be necessary to configure a .htaccess file so the website is properly configured (especially to account for routing pages).
