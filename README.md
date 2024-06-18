@@ -1,5 +1,9 @@
 # cpanel_web_app
 
+## Node and NPM versions
+- Node version 20.14.0
+- NPM version 10.7.0
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
