@@ -1521,9 +1521,9 @@ html {
   opacity: 1;
 }
 
-.group:hover .group-hover\:bg-slate-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+.active\:text-lime-400:active {
+  --tw-text-opacity: 1;
+  color: rgb(163 230 53 / var(--tw-text-opacity));
 }
 
 .data-\[twe-carousel-fade\]\:z-0[data-twe-carousel-fade] {
