@@ -7,7 +7,7 @@ Script
 
 <template>
     <footer>
-        <div class="w-full flex justify-between items-center bg-green-700 flex-col md:flex-row md:px-12">
+        <div class="w-full flex justify-between items-center bg-green-700 flex-col px-5 md:flex-row md:px-12">
             <div class="py-4">
                 <span class="text-xl text-gray-100">Contact Me</span>
                 <ul class="[&>li]:py-1 [&>li>a:hover]:text-yellow-100 text-lg">

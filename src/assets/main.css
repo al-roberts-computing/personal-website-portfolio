@@ -1224,12 +1224,25 @@ html {
   padding-bottom: 0.4rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .pe-3 {
   padding-inline-end: 0.75rem;
 }
 
 .ps-2 {
   padding-inline-start: 0.5rem;
+}
+
+.ps-5 {
+  padding-inline-start: 1.25rem;
+}
+
+.ps-0 {
+  padding-inline-start: 0px;
 }
 
 .text-left {
@@ -1660,6 +1673,13 @@ html {
 .dark\:text-white:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
