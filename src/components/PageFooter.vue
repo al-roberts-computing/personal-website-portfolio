@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
+import { RouterLink } from 'vue-router';
 </script>
 
 Script
@@ -23,9 +24,15 @@ Script
                 </ul>
             </div>
             <span class="my-6 [&>a:hover]:text-slate-300 px-6">
-                <a class="text-xl pe-3 md:ps-2 border-r-[1px]" href="{{url('/terms-and-conditions')}}">Terms of Use</a>
-                <a class="text-xl pe-3 ps-2 border-r-[1px]" href="{{url('/about-me')}}">About Me</a>
-                <a class="text-xl ps-2" href="{{url('/projects')}}">Projects</a>
+                <RouterLink to="/terms-of-use" class="text-xl pe-3 md:ps-2 border-r-[1px]" title="Want to know more?" aria-label="Have a look at my story.">
+                    Terms of Use
+                </RouterLink>
+                <RouterLink to="/about-me" class="text-xl pe-3 ps-2 border-r-[1px]" title="Want to know more?" aria-label="Have a look at my story.">
+                    About Me
+                </RouterLink>
+                <RouterLink to="/projects" class="text-xl ps-2" title="Want to know more?" aria-label="Have a look at my story.">
+                    Projects
+                </RouterLink>
             </span>
         </div>
         <div class="w-full flex justify-around flex-row items-center bg-blue-300 h-12">

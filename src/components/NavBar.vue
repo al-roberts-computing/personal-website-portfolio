@@ -55,15 +55,15 @@ onMounted(async () => {
 
         <div class="!visible hidden item-center w-full lg:w-auto lg:!flex lg:flex-grow-0" id="navbarSupportedContent2" data-twe-collapse-item>
             <!-- hyperlinks to other pages -->
-            <ul class="flex flex-col lg:flex-row text-xl text-neutral-500 lg:ml-1">
-                <li class="list-item self-start ml-10 mt-2 lg:self-center lg:ml-2 lg:me-4 lg:my-0 lg:py-0">
-                    <RouterLink to="/about-me" class="active:text-lime-400 click py-5 select-none dark:text-neutral-100" href="" title="About me page" aria-label="Have a look at my story.">
-                        about me
+            <ul class="flex flex-col lg:flex-row text-xl text-neutral-500">
+                <li class="list-item self-start ml-10 mt-2 lg:self-center lg:ml-0 lg:px-4 lg:border-e-2 lg:border-black lg:my-0 lg:py-0">
+                    <RouterLink to="/about-me" class="hover:text-lime-400 click py-5 select-none dark:text-neutral-100" title="Want to know more?" aria-label="Have a look at my story.">
+                        About Me
                     </RouterLink>
                 </li>
-                <li class="list-item self-start ml-10 my-8 lg:self-center lg:mx-4 lg:ml-0 lg:my-0 lg:py-0">
-                    <RouterLink to="/projects" class="active:text-lime-400 py-5 select-none dark:text-neutral-100" href="" title="My projects" aria-label="Have a look at my projects completed and in progress.">
-                        projects
+                <li class="list-item self-start ml-10 my-8 lg:self-center lg:ml-0 lg:px-4 lg:my-0 lg:py-0">
+                    <RouterLink to="/projects" class="hover:text-lime-400 py-5 select-none dark:text-neutral-100" title="My projects" aria-label="Have a look at my projects completed and in progress.">
+                        Projects
                     </RouterLink>
                 </li>
             </ul>

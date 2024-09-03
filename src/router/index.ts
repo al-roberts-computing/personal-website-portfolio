@@ -24,6 +24,14 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ProjectView.vue')
+    },
+    {
+      path: '/terms-of-use',
+      name: 'terms-of-use-overview',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/TermsOfUseView.vue')
     }
   ]
 })
