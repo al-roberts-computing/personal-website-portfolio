@@ -23,14 +23,14 @@ Script
                     </li>
                 </ul>
             </div>
-            <span class="my-6 [&>a:hover]:text-slate-300 px-6">
-                <RouterLink to="/terms-of-use" class="text-xl pe-3 md:ps-2 border-r-[1px]" title="Want to know more?" aria-label="Have a look at my story.">
+            <span class="my-6 [&>a:hover]:text-slate-300 [&>a]:text-xl [&>a]:px-2 px-6 w-96 flex flex-row divide-x-2 justify-around">
+                <RouterLink to="/terms-of-use" class="" title="Want to know more?" aria-label="Have a look at my story.">
                     Terms of Use
                 </RouterLink>
-                <RouterLink to="/about-me" class="text-xl pe-3 ps-2 border-r-[1px]" title="Want to know more?" aria-label="Have a look at my story.">
+                <RouterLink to="/about-me" class="" title="Want to know more?" aria-label="Have a look at my story.">
                     About Me
                 </RouterLink>
-                <RouterLink to="/projects" class="text-xl ps-2" title="Want to know more?" aria-label="Have a look at my story.">
+                <RouterLink to="/projects" class="" title="Want to know more?" aria-label="Have a look at my story.">
                     Projects
                 </RouterLink>
             </span>
