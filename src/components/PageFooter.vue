@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faCopyright } from '@fortawesome/free-regular-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { RouterLink } from 'vue-router';
 </script>
 
@@ -8,7 +9,7 @@ Script
 
 <template>
     <footer>
-        <div class="w-full flex justify-between items-center bg-green-700 flex-col px-5 md:flex-row md:px-12">
+        <div class="w-full flex justify-between items-center bg-green-700 flex-col px-5 lg:flex-row md:px-12">
             <div class="py-4">
                 <span class="text-xl text-gray-100">Contact Me</span>
                 <ul class="[&>li]:py-1 [&>li>a:hover]:text-yellow-100 text-lg">
@@ -23,15 +24,15 @@ Script
                     </li>
                 </ul>
             </div>
-            <span class="my-6 [&>a:hover]:text-slate-300 [&>a]:text-xl [&>a]:px-2 px-6 w-96 flex flex-row divide-x-2 justify-around">
-                <RouterLink to="/terms-of-use" class="" title="Want to know more?" aria-label="Have a look at my story.">
+            <span class="my-6 [&>a:hover]:text-slate-300 [&>a]:text-xl [&>a]:px-4 w-2/3 flex flex-row divide-x-2 lg:justify-end justify-center">
+                <RouterLink to="/terms-of-use" title="Want to know more?" aria-label="Have a look at my story.">
                     Terms of Use
                 </RouterLink>
-                <RouterLink to="/about-me" class="" title="Want to know more?" aria-label="Have a look at my story.">
-                    About Me
-                </RouterLink>
-                <RouterLink to="/projects" class="" title="Want to know more?" aria-label="Have a look at my story.">
-                    Projects
+                <a href="/test_txt.txt" download title="Download my CV." aria-label="My CV.">
+                    Download CV <FontAwesomeIcon :icon="faDownload" />
+                </a>
+                <RouterLink to="/sitemap" title="Sitemap" aria-label="Check out this sitemap for an overview of this website.">
+                    Sitemap
                 </RouterLink>
             </span>
         </div>

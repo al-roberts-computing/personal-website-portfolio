@@ -722,6 +722,10 @@ html {
   margin-left: 2.5rem;
 }
 
+.ms-40 {
+  margin-inline-start: 10rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -847,6 +851,10 @@ html {
   width: 2rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .w-auto {
   width: auto;
 }
@@ -859,20 +867,12 @@ html {
   width: 100vw;
 }
 
-.w-32 {
-  width: 8rem;
+.w-1\/3 {
+  width: 33.333333%;
 }
 
-.w-64 {
-  width: 16rem;
-}
-
-.w-80 {
-  width: 20rem;
-}
-
-.w-96 {
-  width: 24rem;
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .max-w-\[200px\] {
@@ -986,12 +986,24 @@ html {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
 
 .justify-around {
   justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-4 {
@@ -1089,20 +1101,12 @@ html {
   border-inline-end-width: 0px;
 }
 
-.border-r-\[1px\] {
-  border-right-width: 1px;
-}
-
 .border-s-0 {
   border-inline-start-width: 0px;
 }
 
 .border-s-\[0\.125rem\] {
   border-inline-start-width: 0.125rem;
-}
-
-.border-s-\[1px\] {
-  border-inline-start-width: 1px;
 }
 
 .border-solid {
@@ -1126,11 +1130,6 @@ html {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .border-t-transparent {
@@ -1170,6 +1169,11 @@ html {
 .bg-emerald-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(5 150 105 / var(--tw-bg-opacity));
+}
+
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
 .bg-green-700 {
@@ -1275,14 +1279,6 @@ html {
 
 .pb-8 {
   padding-bottom: 2rem;
-}
-
-.pe-3 {
-  padding-inline-end: 0.75rem;
-}
-
-.ps-2 {
-  padding-inline-start: 0.5rem;
 }
 
 .text-left {
@@ -1760,10 +1756,6 @@ html {
     padding-right: 3rem;
   }
 
-  .md\:ps-2 {
-    padding-inline-start: 0.5rem;
-  }
-
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1818,6 +1810,10 @@ html {
     flex-direction: row;
   }
 
+  .lg\:justify-end {
+    justify-content: flex-end;
+  }
+
   .lg\:justify-center {
     justify-content: center;
   }
@@ -1860,11 +1856,6 @@ html {
   }
 }
 
-.\[\&\:nth-child\(\)\]\:text-xl:nth-child() {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .\[\&\>a\:hover\]\:text-slate-300>a:hover {
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
@@ -1878,11 +1869,6 @@ html {
 .\[\&\>a\]\:px-4>a {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.\[\&\>a\]\:px-3>a {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 
 .\[\&\>a\]\:text-xl>a {
