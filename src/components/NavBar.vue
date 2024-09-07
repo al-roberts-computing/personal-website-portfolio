@@ -55,15 +55,20 @@ onMounted(async () => {
 
         <div class="!visible hidden item-center w-full lg:w-auto lg:!flex lg:flex-grow-0" id="navbarSupportedContent2" data-twe-collapse-item>
             <!-- hyperlinks to other pages -->
-            <ul class="flex flex-col lg:flex-row text-xl text-neutral-500">
-                <li class="list-item self-start ml-10 mt-2 lg:self-center lg:ml-0 lg:px-4 lg:border-e-2 lg:border-black lg:my-0 lg:py-0">
-                    <RouterLink to="/about-me" class="hover:text-lime-400 click py-5 select-none dark:text-neutral-100" title="Want to know more?" aria-label="Have a look at my story.">
+            <ul class="flex flex-col lg:flex-row text-xl text-neutral-500 [&>li]:ml-10 lg:[&>li]:ml-0 [&>li]:list-item [&>li]:self-start lg:[&>li]:self.center lg:[&>li]:my-[1.95rem] lg:[&>li]:py-0 lg:[&>li]:px-4">
+                <li class="mt-2 lg:border-e-2 lg:border-black">
+                    <RouterLink to="/about-me" class="hover:text-lime-400 click py-5 select-none dark:text-neutral-100" title="Have a look at my story." aria-label="Have a look at my story.">
                         About Me
                     </RouterLink>
                 </li>
-                <li class="list-item self-start ml-10 my-8 lg:self-center lg:ml-0 lg:px-4 lg:my-0 lg:py-0">
-                    <RouterLink to="/projects" class="hover:text-lime-400 py-5 select-none dark:text-neutral-100" title="My projects" aria-label="Have a look at my projects completed and in progress.">
+                <li class="my-8 lg:border-e-2 lg:border-black">
+                    <RouterLink to="/projects" class="hover:text-lime-400 py-5 select-none dark:text-neutral-100" title="Have a look at my projects." aria-label="Have a look at my projects completed and in progress.">
                         Projects
+                    </RouterLink>
+                </li>
+                <li class="mb-8">
+                    <RouterLink to="/blogs" class="hover:text-lime-400 py-5 select-none dark:text-neutral-100" title="Have a look at my blogs." aria-label="Have a look at my blogs.">
+                        Blogs
                     </RouterLink>
                 </li>
             </ul>
@@ -103,10 +108,6 @@ onMounted(async () => {
             </div>
         </div>
     </nav>
-
-    <button id="to-top-btn" class="custom-back-to-top hidden fixed bottom-9 right-8 w-6 h-6 rounded-full opacity-70 transition-colors bg-cyan-100 hover:opacity-100 hover:bg-orange-300 hover:text-slate-100" aria-label="Go back to top" @click="windowToTop();">
-        <FontAwesomeIcon class="block mx-auto dark:hidden" :icon="faArrowUp" />
-    </button>
 </template>
 
 <script lang="ts">
@@ -117,11 +118,6 @@ const toggleDarkMode = () => {
 
 const toggleHamburgerMenuAnimation = () => {
     (document.querySelector('#toggle-menu') as HTMLInputElement)?.classList.toggle('hamburger-toggle');
-}
-
-const windowToTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
 }
 
 window.addEventListener('resize', function() {

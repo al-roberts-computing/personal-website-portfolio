@@ -24,7 +24,8 @@
     "gsap": "^3.12.5",
     "tw-elements": "^2.0.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue3-spline": "^1.0.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
