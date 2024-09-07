@@ -1767,6 +1767,10 @@ html {
     position: absolute;
   }
 
+  .lg\:z-50 {
+    z-index: 50;
+  }
+
   .lg\:mx-44 {
     margin-left: 11rem;
     margin-right: 11rem;

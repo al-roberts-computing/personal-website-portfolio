@@ -7,7 +7,7 @@ import { faSun, faMoon, faArrowRight, faXmark, faArrowUp } from '@fortawesome/fr
     <button id="to-top-btn" class="custom-back-to-top hidden fixed z-50 bottom-9 right-8 w-6 h-6 rounded-full opacity-70 transition-colors bg-cyan-100 hover:opacity-100 hover:bg-orange-300 hover:text-slate-100" aria-label="Go back to top" @click="windowToTop();">
         <FontAwesomeIcon class="block mx-auto dark:hidden" :icon="faArrowUp" />
     </button>
-    <div class="hidden fixed top-50 w-auto h-auto lg:block lg:absolute">
+    <div class="hidden fixed top-50 w-auto h-auto lg:block lg:absolute lg:z-50">
         <div id="accessibility-menu" class="float-left flex flex-col items-center w-0 h-12 bg-emerald-600 transition-all duration-150">
             <div class="w-16 h-7 rounded-3xl mt-[0.65rem] bg-yellow-200 border-none dark:bg-blue-500">
                 <!-- 
