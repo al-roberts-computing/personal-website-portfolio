@@ -35,7 +35,7 @@ onMounted(async () => {
             Accessed: 15/06/2023
         -->
         <!-- logo and name -->
-        <RouterLink to="/" class="text-xl text-neutral-500 h-max select-none flex flex-nowrap items-center px-2 py-5 lg:rounded-b-lg lg:px-2 lg:ml-0 duration-500 dark:text-neutral-100 hover:bg-orange-600" href="/" title="Home">
+        <RouterLink to="/" class="text-xl text-neutral-500 h-max select-none flex flex-nowrap items-center px-2 py-5 lg:rounded-b-lg lg:px-2 lg:ml-0 dark:text-neutral-100 hover:bg-orange-600" href="/" title="Home">
             <img src="/favicon.png" height="48px" width="48px" alt="logo" />
             <span class="mx-2">Alexander Roberts</span>
         </RouterLink>
@@ -57,17 +57,17 @@ onMounted(async () => {
             <!-- hyperlinks to other pages -->
             <ul class="flex flex-col lg:flex-row text-xl text-neutral-500 [&>li]:ml-10 lg:[&>li]:ml-0 [&>li]:list-item [&>li]:self-start lg:[&>li]:self.center lg:[&>li]:my-[1.95rem] lg:[&>li]:py-0 lg:[&>li]:px-4">
                 <li class="mt-2 lg:border-e-2 lg:border-black">
-                    <RouterLink to="/about-me" class="hover:!text-lime-400 click py-5 select-none duration-500 dark:text-neutral-100" title="Have a look at my story." aria-label="Have a look at my story.">
+                    <RouterLink to="/about-me" class="hover:!text-lime-400 click py-5 select-none dark:text-neutral-100" title="Have a look at my story." aria-label="Have a look at my story.">
                         About Me
                     </RouterLink>
                 </li>
                 <li class="my-8 lg:border-e-2 lg:border-black">
-                    <RouterLink to="/projects" class="hover:!text-lime-400 py-5 select-none duration-500 dark:text-neutral-100" title="Have a look at my projects." aria-label="Have a look at my projects completed and in progress.">
+                    <RouterLink to="/projects" class="hover:!text-lime-400 py-5 select-none dark:text-neutral-100" title="Have a look at my projects." aria-label="Have a look at my projects completed and in progress.">
                         Projects
                     </RouterLink>
                 </li>
                 <li class="mb-8">
-                    <RouterLink to="/blogs" class="hover:!text-lime-400 py-5 select-none duration-500 dark:text-neutral-100" title="Have a look at my blogs." aria-label="Have a look at my blogs.">
+                    <RouterLink to="/blogs" class="hover:!text-lime-400 py-5 select-none dark:text-neutral-100" title="Have a look at my blogs." aria-label="Have a look at my blogs.">
                         Blogs
                     </RouterLink>
                 </li>

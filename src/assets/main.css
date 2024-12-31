@@ -648,10 +648,6 @@ html {
   z-index: -40;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -1469,12 +1465,12 @@ html {
   transition-duration: 300ms;
 }
 
-.duration-\[350ms\] {
-  transition-duration: 350ms;
-}
-
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.duration-\[350ms\] {
+  transition-duration: 350ms;
 }
 
 .ease-\[cubic-bezier\(0\2c 0\2c 0\.15\2c 1\)\2c _cubic-bezier\(0\2c 0\2c 0\.15\2c 1\)\] {
@@ -1537,14 +1533,14 @@ html {
   background-color: rgb(168 85 247 / var(--tw-bg-opacity));
 }
 
+.hover\:\!text-lime-400:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(163 230 53 / var(--tw-text-opacity)) !important;
+}
+
 .hover\:text-green-200:hover {
   --tw-text-opacity: 1;
   color: rgb(187 247 208 / var(--tw-text-opacity));
-}
-
-.hover\:text-lime-400:hover {
-  --tw-text-opacity: 1;
-  color: rgb(163 230 53 / var(--tw-text-opacity));
 }
 
 .hover\:text-orange-500:hover {
@@ -1565,11 +1561,6 @@ html {
 .hover\:text-slate-100:hover {
   --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity));
-}
-
-.hover\:\!text-lime-400:hover {
-  --tw-text-opacity: 1 !important;
-  color: rgb(163 230 53 / var(--tw-text-opacity)) !important;
 }
 
 .hover\:no-underline:hover {
