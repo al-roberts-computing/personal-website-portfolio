@@ -28,14 +28,14 @@ onMounted(async () => {
 
 <template>
     <!-- main navigation -->
-    <nav id="main-nav" class="back-to-top-trigger flex flex-wrap w-full justify-between select-none mb-0 md:mb-4 bg-[#354076] lg:bg-transparent lg:justify-center">
+    <nav id="main-nav" class="back-to-top-trigger lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-50 flex flex-wrap w-full lg:w-1/2 px-5 mx-auto justify-between select-none mb-0 md:mb-4 bg-[#354076] lg:rounded-b-xl lg:justify-center">
         <!-- 
             Navbar partially inspired by TailWindCSS
             Available at: https://tailwind-elements.com/docs/standard/navigation/navbar/
             Accessed: 15/06/2023
         -->
         <!-- logo and name -->
-        <RouterLink to="/" class="text-xl text-neutral-500 h-max select-none flex flex-nowrap items-center px-2 py-5 lg:rounded-b-lg lg:px-2 lg:ml-0 dark:text-neutral-100 hover:bg-orange-600" href="/" title="Home">
+        <RouterLink to="/" class="text-xl text-neutral-500 h-max select-none flex flex-nowrap items-center px-2 py-5 lg:px-2 lg:ml-0 dark:text-neutral-100 hover:bg-orange-600" href="/" title="Home">
             <img src="/favicon.png" height="48px" width="48px" alt="logo" />
             <span class="mx-2">Alexander Roberts</span>
         </RouterLink>
