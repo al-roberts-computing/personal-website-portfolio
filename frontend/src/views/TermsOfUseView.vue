@@ -16,6 +16,11 @@
                         Alexander Roberts and is protected by copyright and other intellectual property laws. You may not reproduce,
                         distribute, or create derivative works from any content without explicit permission.
                     </p>
+                    <br>
+                    <p class="text-lg">Some images used on the Website are sourced from external platforms such as Pixabay and are used in compliance with their terms, 
+                        including the use of royalty-free images. 
+                        Such images are credited accordingly and are not claimed as original works of Alexander Roberts.
+                    </p>
             </li>
             <!-- use of website -->
             <li class="list-item">

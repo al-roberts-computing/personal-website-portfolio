@@ -28,7 +28,7 @@ Script
                 <RouterLink to="/terms-of-use" title="Want to know more?" aria-label="Have a look at my story.">
                     Terms of Use
                 </RouterLink>
-                <a href="/test_txt.txt" download title="Download my CV." aria-label="My CV.">
+                <a href="/Alexander Roberts CV.pdf" download title="Download my CV." aria-label="My CV.">
                     Download CV <FontAwesomeIcon :icon="faDownload" />
                 </a>
                 <RouterLink to="/sitemap" title="Sitemap" aria-label="Check out this sitemap for an overview of this website.">

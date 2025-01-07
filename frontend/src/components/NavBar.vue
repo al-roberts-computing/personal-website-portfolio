@@ -28,7 +28,7 @@ onMounted(async () => {
 
 <template>
     <!-- main navigation -->
-    <nav id="main-nav" class="back-to-top-trigger lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-50 flex flex-wrap w-full lg:w-1/2 px-5 mx-auto justify-between select-none mb-0 md:mb-4 bg-[#354076] lg:rounded-b-xl lg:justify-center">
+    <nav id="main-nav" class="back-to-top-trigger lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-50 flex flex-wrap w-full lg:w-1/2 px-5 mx-auto justify-between select-none bg-[#354076] lg:rounded-b-xl lg:justify-center">
         <!-- 
             Navbar partially inspired by TailWindCSS
             Available at: https://tailwind-elements.com/docs/standard/navigation/navbar/

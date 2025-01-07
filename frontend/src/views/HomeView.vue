@@ -11,15 +11,15 @@ onMounted(async () => {
 <template>
   <main class="dark:text-neutral-100 duration-500 mb-3">
     <section class="w-full h-full dark:bg-[#2E4057] overflow-x-hidden">
-      <div class="opening-content-div">
+      <div class="opening-content-div hidden lg:block">
         <div class="absolute left-1/2 h-full bg-[#00C6B9] w-2 z-30"></div>
         <div class="absolute top-1/2 w-full bg-[#00C6B9] h-2 z-30"></div>
         <div class="absolute top-0 left-0 bottom-0 right-0 w-[26rem] h-48 m-auto rounded-full text-center bg-[#00C6B9] p-10 text-6xl z-40">
           <span class="text-[#f8fafc]">ALEXANDER ROBERTS</span>
         </div>
       </div>
-      <div class="w-screen h-screen z-10 flex justify-between flex-wrap flex-col lg:flex-row [&>div]:min-w-[50%] [&>div]:w-[50%] [&>div]:h-[50%] text-[#f8fafc]">
-        <div class="p-48 text-6xl bg-[url('/frequency-wave.jpg')] text-center bg-cover">
+      <div class="w-screen h-full lg:h-screen z-10 flex justify-between flex-wrap flex-col lg:flex-row [&>div]:min-w-[50%] lg:[&>div]:w-[50%] [&>div]:w-full [&>div]:h-[50%] text-[#f8fafc]">
+        <div class="pt-48 pb-48 lg:pb-0 text-5xl bg-[url('/frequency-wave.jpg')] text-center bg-cover">
           <!-- 
           Image by Peace,love,happiness from Pixabay
           Available at: https://pixabay.com/illustrations/frequency-wave-geometry-pattern-7776034/
@@ -30,7 +30,7 @@ onMounted(async () => {
           <span class="font-bold"> Data Scientist </span>
           <FontAwesomeIcon :icon="faFlask" />
         </div>
-        <div class="p-48 text-6xl text-center bg-[url('/idea-bulb.jpg')] bg-cover">
+        <div class="pt-48 pb-48 lg:pb-0 text-5xl text-center bg-[url('/idea-bulb.jpg')] bg-cover">
           <!-- 
           Image by Pete Linforth from Pixabay
           Available at: https://pixabay.com/illustrations/idea-light-bulb-innovation-4867554/
@@ -41,7 +41,7 @@ onMounted(async () => {
           <span class="font-bold"> Innovator </span>
           <FontAwesomeIcon :icon="faLightbulb" />
         </div>
-        <div class="p-48 text-6xl text-center bg-[url('/puzzle.jpg')] bg-cover">
+        <div class="pt-48 pb-48 lg:pb-0 text-5xl text-center bg-[url('/puzzle.jpg')] bg-cover">
           <!-- 
           Image by PIRO from Pixabay
           Available at: https://pixabay.com/illustrations/puzzle-connection-team-isolated-3d-7507357/
