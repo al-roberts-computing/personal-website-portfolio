@@ -1,5 +1,5 @@
 <template>
-    <main class="terms-of-use lg:mx-44 bg-orange-300 rounded-md p-10 mb-10">
+    <main class="terms-of-use lg:mx-44 bg-orange-300 rounded-md p-10 ps-16 mb-10">
         <h1 class="text-3xl pb-8">Terms of Use</h1>
         <ol>
             <!-- acceptance of terms -->

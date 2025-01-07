@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import ComingSoon from '@/components/ComingSoon.vue';
+</script>
+
 <template>
-    <main class="projects-overview">
-      <h1>This is a project overview page</h1>
-    </main>
-</template>  
+    <section>
+      <ComingSoon />
+    </section>
+</template>

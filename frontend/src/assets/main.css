@@ -737,6 +737,11 @@ html {
   margin-bottom: 2rem;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -856,6 +861,10 @@ html {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-36 {
+  height: 9rem;
 }
 
 .w-0 {
@@ -1246,6 +1255,31 @@ html {
   background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#CAF0F8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 240 248 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#00B4D8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 180 216 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#90E0EF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(144 224 239 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#0077B6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 119 182 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\/frequency-wave\.jpg\'\)\] {
   background-image: url('/frequency-wave.jpg');
 }
@@ -1274,8 +1308,8 @@ html {
   padding: 1rem;
 }
 
-.p-48 {
-  padding: 12rem;
+.p-16 {
+  padding: 4rem;
 }
 
 .px-2 {
@@ -1328,6 +1362,10 @@ html {
   padding-bottom: 0.4rem;
 }
 
+.pb-48 {
+  padding-bottom: 12rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1336,8 +1374,24 @@ html {
   padding-top: 12rem;
 }
 
-.pb-48 {
-  padding-bottom: 12rem;
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pt-14 {
+  padding-top: 3.5rem;
+}
+
+.ps-16 {
+  padding-inline-start: 4rem;
 }
 
 .text-left {
@@ -1366,6 +1420,11 @@ html {
   line-height: 2.5rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -1384,11 +1443,6 @@ html {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -1455,6 +1509,16 @@ html {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-neutral-100 {
+  --tw-text-opacity: 1;
+  color: rgb(245 245 245 / var(--tw-text-opacity));
+}
+
+.text-neutral-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity));
 }
 
 .no-underline {
@@ -1788,6 +1852,21 @@ html {
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-\[\#03045E\]:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 4 94 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-\[\#0077B6\]:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 119 182 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-\[\#90E0EF\]:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(144 224 239 / var(--tw-bg-opacity));
+}
+
 .dark\:text-neutral-100:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
@@ -1804,10 +1883,6 @@ html {
 }
 
 @media (min-width: 768px) {
-  .md\:mb-4 {
-    margin-bottom: 1rem;
-  }
-
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1840,8 +1915,21 @@ html {
     margin-right: 11rem;
   }
 
+  .lg\:my-60 {
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+  }
+
   .lg\:ml-0 {
     margin-left: 0px;
+  }
+
+  .lg\:mt-60 {
+    margin-top: 15rem;
+  }
+
+  .lg\:mb-32 {
+    margin-bottom: 8rem;
   }
 
   .lg\:block {
@@ -1856,10 +1944,6 @@ html {
     display: none;
   }
 
-  .lg\:h-2 {
-    height: 0.5rem;
-  }
-
   .lg\:h-screen {
     height: 100vh;
   }
@@ -1872,8 +1956,8 @@ html {
     width: auto;
   }
 
-  .lg\:w-2 {
-    width: 0.5rem;
+  .lg\:w-\[80\%\] {
+    width: 80%;
   }
 
   .lg\:flex-grow-0 {
@@ -1914,11 +1998,6 @@ html {
   .lg\:pb-0 {
     padding-bottom: 0px;
   }
-
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
 }
 
 .\[\&\>a\:hover\]\:text-slate-300>a:hover {
@@ -1940,10 +2019,6 @@ html {
   height: 50%;
 }
 
-.\[\&\>div\]\:w-\[50\%\]>div {
-  width: 50%;
-}
-
 .\[\&\>div\]\:w-full>div {
   width: 100%;
 }
@@ -1953,10 +2028,6 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .lg\:\[\&\>div\]\:w-full>div {
-    width: 100%;
-  }
-
   .lg\:\[\&\>div\]\:w-\[50\%\]>div {
     width: 50%;
   }
