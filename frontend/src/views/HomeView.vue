@@ -19,7 +19,7 @@ onMounted(async () => {
         </div>
       </div>
       <div class="w-screen h-full lg:h-screen z-10 flex justify-between flex-wrap flex-col lg:flex-row [&>div]:min-w-[50%] lg:[&>div]:w-[50%] [&>div]:w-full [&>div]:h-[50%] text-[#f8fafc]">
-        <div class="pt-48 pb-48 lg:pb-0 text-5xl bg-[url('/frequency-wave.jpg')] text-center bg-cover">
+        <div class="pt-48 pb-48 lg:pb-0 text-4xl md:text-5xl bg-[url('/frequency-wave.jpg')] text-center bg-cover">
           <!-- 
           Image by Peace,love,happiness from Pixabay
           Available at: https://pixabay.com/illustrations/frequency-wave-geometry-pattern-7776034/
@@ -30,7 +30,7 @@ onMounted(async () => {
           <span class="font-bold"> Data Scientist </span>
           <FontAwesomeIcon :icon="faFlask" />
         </div>
-        <div class="pt-48 pb-48 lg:pb-0 text-5xl text-center bg-[url('/idea-bulb.jpg')] bg-cover">
+        <div class="pt-48 pb-48 lg:pb-0 text-4xl lg:text-5xl text-center bg-[url('/idea-bulb.jpg')] bg-cover">
           <!-- 
           Image by Pete Linforth from Pixabay
           Available at: https://pixabay.com/illustrations/idea-light-bulb-innovation-4867554/
@@ -41,7 +41,7 @@ onMounted(async () => {
           <span class="font-bold"> Innovator </span>
           <FontAwesomeIcon :icon="faLightbulb" />
         </div>
-        <div class="pt-48 pb-48 lg:pb-0 text-5xl text-center bg-[url('/puzzle.jpg')] bg-cover">
+        <div class="pt-48 pb-48 lg:pb-0 text-4xl md:text-5xl text-center bg-[url('/puzzle.jpg')] bg-cover">
           <!-- 
           Image by PIRO from Pixabay
           Available at: https://pixabay.com/illustrations/puzzle-connection-team-isolated-3d-7507357/

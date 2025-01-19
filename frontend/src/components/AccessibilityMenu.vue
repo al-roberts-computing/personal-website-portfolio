@@ -4,9 +4,6 @@ import { faSun, faMoon, faArrowRight, faXmark, faArrowUp } from '@fortawesome/fr
 </script>
 
 <template>
-    <button id="to-top-btn" class="custom-back-to-top hidden fixed z-50 bottom-9 right-8 w-6 h-6 rounded-full opacity-70 transition-colors bg-cyan-100 hover:opacity-100 hover:bg-orange-300 hover:text-slate-100" aria-label="Go back to top" @click="windowToTop();">
-        <FontAwesomeIcon class="block mx-auto dark:hidden" :icon="faArrowUp" />
-    </button>
     <div class="hidden fixed top-44 left-0 lg:block lg:z-50">
         <div id="accessibility-menu" class="float-left flex flex-col items-center w-0 h-12 bg-emerald-600 transition-all duration-150">
             <div class="w-16 h-7 rounded-3xl mt-[0.65rem] bg-yellow-200 border-none dark:bg-blue-500">
@@ -52,11 +49,6 @@ const toggleAccessibilityMenu = () => {
     (document.querySelector('#accessibility-menu') as HTMLInputElement)?.classList.toggle('w-24');
     (document.querySelector('#open-accessibility-arrow-icon') as HTMLInputElement)?.classList.toggle('hidden');
     (document.querySelector('#close-accessibility-xmark-icon') as HTMLInputElement)?.classList.toggle('hidden');
-}
-
-const windowToTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
 }
 
 const toggleDarkMode = () => {
