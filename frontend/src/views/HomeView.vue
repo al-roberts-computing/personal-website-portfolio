@@ -9,7 +9,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <main class="dark:text-neutral-100 duration-500 mb-3">
+  <main class="dark:text-neutral-100 duration-500">
     <section class="w-full h-full dark:bg-[#2E4057] overflow-x-hidden">
       <div class="opening-content-div hidden lg:block">
         <div class="absolute left-1/2 h-full bg-[#00C6B9] w-2 z-30"></div>
@@ -30,7 +30,7 @@ onMounted(async () => {
           <span class="font-bold"> Data Scientist </span>
           <FontAwesomeIcon :icon="faFlask" />
         </div>
-        <div class="pt-48 pb-48 lg:pb-0 text-4xl lg:text-5xl text-center bg-[url('/idea-bulb.jpg')] bg-cover">
+        <div class="pt-48 pb-48 lg:pb-0 text-4xl md:text-5xl text-center bg-[url('/idea-bulb.jpg')] bg-cover">
           <!-- 
           Image by Pete Linforth from Pixabay
           Available at: https://pixabay.com/illustrations/idea-light-bulb-innovation-4867554/
