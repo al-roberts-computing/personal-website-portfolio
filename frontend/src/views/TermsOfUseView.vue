@@ -1,6 +1,6 @@
 <template>
     <main class="terms-of-use lg:mx-44 bg-orange-300 rounded-md p-10 ps-16">
-        <h1 class="text-3xl pb-8">Terms of Use</h1>
+        <h1 class="text-3xl pb-8 font-bold">Terms of Use</h1>
         <ol>
             <!-- acceptance of terms -->
             <li class="list-item">
@@ -17,7 +17,7 @@
                         distribute, or create derivative works from any content without explicit permission.
                     </p>
                     <br>
-                    <p class="text-lg">Some images used on the Website are sourced from external platforms such as Pixabay and are used in compliance with their terms, 
+                    <p class="text-lg">Some images used on this website are sourced from external platforms such as Pixabay and are used in compliance with their terms, 
                         including the use of royalty-free images. 
                         Such images are credited accordingly and are not claimed as original works of Alexander Roberts.
                     </p>
@@ -65,7 +65,7 @@
             <!-- contact info -->
             <li class="list-item">
                 <h2 class="text-xl py-4 font-bold">8. Contact Information</h2>
-                    <p class="text-lg">If you have any questions about these Terms of Use, please contact <a href="mailto:contact-me@alexander-roberts.me" class="text-blue-500 hover:text-purple-400">contact-me@alexander-roberts.me</a>.
+                    <p class="text-lg">If you have any questions about these Terms of Use, please contact <a href="mailto:a.roberts539@outlook.com" class="text-blue-500 hover:text-purple-400">a.roberts539@outlook.com</a>.
                     </p>
             </li>
         </ol>
