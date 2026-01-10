@@ -35,7 +35,7 @@ onMounted(async () => {
             Accessed: 15/06/2023
         -->
         <!-- logo and name -->
-        <RouterLink to="/" class="text-xl h-max select-none flex flex-nowrap items-center px-2 py-5 lg:px-2 lg:ml-0 text-neutral-100 hover:bg-orange-600" href="/" title="Home">
+        <RouterLink to="/" class="text-xl h-max select-none flex flex-nowrap items-center py-5 lg:px-2 lg:ml-0 text-neutral-100 hover:bg-orange-600" href="/" title="Home">
             <img src="/favicon.png" height="48px" width="48px" alt="logo" />
             <span class="mx-2">Alexander Roberts</span>
         </RouterLink>
@@ -75,7 +75,7 @@ onMounted(async () => {
             <!-- social media icons -->
             <ul class="flex items-center justify-between ml-10 w-40 text-md text-4xl">
                 <li class="select-none">
-                    <a class="block hover:text-orange-500" href="mailto:contact-me@alexander-roberts.me" title="Email me">
+                    <a class="block hover:text-orange-500" href="mailto:a.roberts539@outlook.com" title="Email me">
                         <FontAwesomeIcon :icon="faEnvelope" />
                     </a>
                 </li>
