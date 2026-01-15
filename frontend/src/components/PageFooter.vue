@@ -10,7 +10,7 @@ import { RouterLink } from 'vue-router';
         <div class="w-full flex justify-between items-center bg-[#0077B6] flex-col px-5 lg:flex-row md:px-12">
             <div class="py-4">
                 <span class="text-xl text-gray-100">Contact Me</span>
-                <ul class="[&>li]:py-1 [&>li>a:hover]:text-yellow-100 text-lg">
+                <ul class="[&>li]:py-1 [&>li>a:hover]:text-yellow-100 text-lg [&>li>a]:underline [&>li>a]:text-blue-200">
                     <li>
                         Email: <a href="mailto:a.roberts539@outlook.com">a.roberts539@outlook.com</a>
                     </li>
@@ -22,8 +22,8 @@ import { RouterLink } from 'vue-router';
                     </li>
                 </ul>
             </div>
-            <span class="my-6 [&>a:hover]:text-slate-300 [&>a]:text-xl [&>a]:px-4 w-2/3 flex flex-row divide-x-2 lg:justify-end justify-center">
-                <RouterLink to="/terms-of-use" title="Want to know more?" aria-label="Have a look at my story.">
+            <span class="my-6 [&>a:hover]:text-slate-300 [&>a]:text-xl [&>a]:px-4 md:w-2/3 flex flex-row divide-x-2 lg:justify-end justify-center">
+                <RouterLink to="/terms-of-use" title="Want to know more?" aria-label="Have a look at my story." class="!pl-0">
                     Terms of Use
                 </RouterLink>
                 <a href="/Alexander-Roberts-Public-CV.pdf" download title="Download my CV" aria-label="My CV">
