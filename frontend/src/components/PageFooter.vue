@@ -26,8 +26,8 @@ import { RouterLink } from 'vue-router';
                 <RouterLink to="/terms-of-use" title="Want to know more?" aria-label="Have a look at my story." class="!pl-0">
                     Terms of Use
                 </RouterLink>
-                <a href="/Alexander-Roberts-Public-CV.pdf" download title="Download my CV" aria-label="My CV">
-                    Download CV <FontAwesomeIcon :icon="faDownload" />
+                <a href="/Alexander-Roberts-Public-CV.pdf" target="_blank" title="Download my CV" aria-label="My CV">
+                    CV
                 </a>
                 <RouterLink to="/sitemap" title="Sitemap" aria-label="Check out this sitemap for an overview of this website.">
                     Sitemap
