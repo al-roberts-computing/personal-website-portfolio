@@ -58,7 +58,7 @@ onMounted(async () => {
             <ul class="flex flex-col lg:flex-row text-xl text-neutral-100 [&>li]:ml-10 lg:[&>li]:ml-0 [&>li]:list-item [&>li]:self-start lg:[&>li]:self.center lg:[&>li]:my-[1.95rem] lg:[&>li]:py-0 lg:[&>li]:px-4">
                 <li class="mt-2 lg:border-e-2 lg:border-black">
                     <RouterLink to="/about-me" class="hover:!text-lime-400 click py-5 select-none" title="Have a look at my story." aria-label="Have a look at my story.">
-                        About Me
+                        About
                     </RouterLink>
                 </li>
                 <li class="my-8 lg:border-e-2 lg:border-black">
