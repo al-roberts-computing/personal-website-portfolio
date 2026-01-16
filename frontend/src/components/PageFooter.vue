@@ -10,7 +10,7 @@ import { RouterLink } from 'vue-router';
         <div class="w-full flex justify-between items-center bg-[#0077B6] flex-col px-5 lg:flex-row md:px-12">
             <div class="py-4">
                 <span class="text-xl text-gray-100">Contact Me</span>
-                <ul class="[&>li]:py-1 [&>li>a:hover]:text-yellow-100 text-lg [&>li>a]:underline [&>li>a]:text-blue-200">
+                <ul class="[&>li]:py-1 [&>li>a:hover]:text-red-400 text-lg [&>li>a:visited]:text-pink-600 [&>li>a]:underline [&>li>a]:text-blue-100">
                     <li>
                         Email: <a href="mailto:a.roberts539@outlook.com">a.roberts539@outlook.com</a>
                     </li>
