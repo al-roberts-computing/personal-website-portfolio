@@ -28,7 +28,7 @@ onMounted(async () => {
 
 <template>
     <!-- main navigation -->
-    <nav id="main-nav" class="back-to-top-trigger lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-50 flex flex-wrap w-full lg:w-1/2 px-5 mx-auto justify-between select-none bg-[#354076] lg:rounded-b-xl lg:justify-center">
+    <nav id="main-nav" class="back-to-top-trigger lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:z-50 flex flex-wrap w-full lg:w-[38rem] px-5 mx-auto justify-between select-none bg-[#354076] lg:rounded-b-xl lg:justify-center">
         <!-- 
             Navbar partially inspired by TailWindCSS
             Available at: https://tailwind-elements.com/docs/standard/navigation/navbar/
@@ -37,7 +37,7 @@ onMounted(async () => {
         <!-- logo and name -->
         <RouterLink to="/" class="text-xl h-max select-none flex flex-nowrap items-center py-5 lg:px-2 lg:ml-0 text-neutral-100 hover:bg-orange-600" href="/" title="Home">
             <img src="/favicon.png" height="48px" width="48px" alt="logo" />
-            <span class="mx-2">Alexander Roberts</span>
+            <span class="px-2 lg:hidden">Alexander Roberts</span>
         </RouterLink>
 
         <!-- hamburger button for mobile/tablet view -->
@@ -57,7 +57,7 @@ onMounted(async () => {
             <!-- hyperlinks to other pages -->
             <ul class="flex flex-col lg:flex-row text-xl text-neutral-100 [&>li]:ml-10 lg:[&>li]:ml-0 [&>li]:list-item [&>li]:self-start lg:[&>li]:self.center lg:[&>li]:my-[1.95rem] lg:[&>li]:py-0 lg:[&>li]:px-4">
                 <li class="mt-2 lg:border-e-2 lg:border-black">
-                    <RouterLink to="/about-me" class="hover:!text-lime-400 click py-5 select-none" title="Have a look at my story." aria-label="Have a look at my story.">
+                    <RouterLink to="/about" class="hover:!text-lime-400 click py-5 select-none" title="Have a look at my story." aria-label="Have a look at my story.">
                         About
                     </RouterLink>
                 </li>
