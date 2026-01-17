@@ -67,8 +67,8 @@ onMounted(async () => {
                     </RouterLink>
                 </li>
                 <li class="mb-8">
-                    <RouterLink to="/blogs" class="hover:!text-lime-400 py-5 select-none" title="Have a look at my blogs." aria-label="Have a look at my blogs.">
-                        Blogs
+                    <RouterLink to="/blog" class="hover:!text-lime-400 py-5 select-none" title="Have a look at my blogs." aria-label="Have a look at my blogs.">
+                        Blog
                     </RouterLink>
                 </li>
             </ul>
