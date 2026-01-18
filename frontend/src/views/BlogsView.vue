@@ -100,7 +100,7 @@ onMounted(async () => {
 
 <template>
   <section class="feed-container w-full my-8 px-20 md:px-28 lg:px-44">
-    <h1 class="text-5xl py-8 float-start">Blog</h1>
+    <h1 class="text-5xl text-black py-8 float-start dark:text-white">Blog</h1>
     <div class="max-w-4xl mb-10 float-end mt-8">
       <div class="relative group">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -126,7 +126,7 @@ onMounted(async () => {
         </button>
       </div>
 
-      <p class="mt-3 text-sm text-slate-500 italic">
+      <p class="mt-3 text-sm text-slate-500 dark:text-gray-100 italic">
         Showing {{ filteredPosts.length }} of {{ formattedPosts.length }} articles
       </p>
     </div>
@@ -136,11 +136,11 @@ onMounted(async () => {
       </div>
     </section>
 
-    <div v-if="filteredPosts.length === 0" class="text-center py-60">
+    <div v-if="filteredPosts.length === 0 && formattedPosts.length > 0" class="text-center py-60">
       <p class="text-xl text-slate-400">No articles found matching "{{ searchQuery }}"</p>
     </div>
 
-    <div v-if="isLoading" class="loading text-xl p-6 bg-slate-400 text-blue-800 w-60 rounded-md text-center h-30 self-center mx-auto">
+    <div v-if="isLoading" class="loading text-xl p-6 bg-slate-400 text-blue-800 mt-20 w-60 rounded-md text-center h-30 self-center mx-auto">
       <p>Fetching latest articles...</p>
     </div>
 
