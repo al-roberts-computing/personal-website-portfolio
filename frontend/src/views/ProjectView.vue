@@ -36,9 +36,9 @@ onMounted(async () => {
 
 
 <template>
-  <section class="feed-container w-full my-8 px-20 md:px-28 lg:px-44">
-    <h1 class="text-5xl py-8">Projects</h1>
-    <p class="text-slate-600 mb-6">A selection of my recent projects hosted on GitHub. Click "Code" to view the source code or "Demo" to see it in action.</p>
+  <section class="feed-container w-full my-8 px-20 md:px-28 lg:px-44 lg:mt-20">
+    <h1 class="text-5xl py-8 text-black dark:text-white">Projects</h1>
+    <p class="text-slate-600 mb-6 dark:text-slate-100">A selection of my recent projects hosted on GitHub. Click "Code" to view the source code or "Demo" to see it in action.</p>
     
     <div v-if="isLoading" class="loading text-xl p-6 bg-slate-400 text-blue-800 w-60 rounded-md text-center h-30 self-center mx-auto">
       <p>Fetching repos...</p>
