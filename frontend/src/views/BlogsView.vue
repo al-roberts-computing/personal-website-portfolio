@@ -22,17 +22,12 @@ const posts = ref<MediumPost[]>([]);
 
 const formattedPosts = computed(() => {
   return posts.value.map(post => {
-    // 1. Create a virtual element to parse the HTML string
     const parser = new DOMParser();
     const doc = parser.parseFromString(post.description, 'text/html');
 
-    // 2. Find the image
-    // Medium usually puts it in an <img> tag inside the 'medium-feed-image' class
     const imgElement = doc.querySelector('.medium-feed-image img') as HTMLImageElement;
     const featuredImage = imgElement ? imgElement.src : (post.thumbnail || DEFAULT_IMAGE);
 
-    // 3. Find the text snippet
-    // We look for 'medium-feed-snippet' or just get all text if that's missing
     const snippetElement = doc.querySelector('.medium-feed-snippet');
     let excerpt = '';
 
