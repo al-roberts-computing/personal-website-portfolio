@@ -74,7 +74,7 @@ const isLoading = ref(true);
 const error = ref<string | null>(null);
 
 const url =
-  'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@adhamhidawy';
+  'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@al-roberts-computing';
 
 onMounted(async () => {
   try {
@@ -88,6 +88,9 @@ onMounted(async () => {
     console.error(err);
   } finally {
     isLoading.value = false;
+    if (posts.value.length === 0) {
+      error.value = 'No articles found.';
+    }
   }
 });
 
@@ -95,41 +98,38 @@ onMounted(async () => {
 
 <template>
   <section class="feed-container w-full my-8 px-20 md:px-28 lg:px-44">
-    <h1 class="text-5xl text-black py-8 float-start dark:text-white">Blog</h1>
-    <div class="max-w-4xl mb-10 float-end mt-8">
-      <div class="relative group">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg class="w-5 h-5 text-slate-400 group-focus-within:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:mt-20">
+      <h1 class="text-5xl text-black py-8 dark:text-white">Blog</h1>
+      <div class="lg:mt-8">
+        <div class="relative group">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg class="w-5 h-5 text-slate-400 group-focus-within:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+
+          <input 
+            v-model="searchQuery"
+            type="text" 
+            placeholder="Search articles" 
+            class="block w-full p-4 pl-10 text-sm text-slate-900 border border-slate-200 rounded-2xl bg-white 
+                  focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none"
+          />
+
+          <button 
+            v-if="searchQuery" 
+            @click="searchQuery = ''"
+            class="absolute inset-y-0 right-0 flex items-center pr-4 text-slate-400 hover:text-slate-600"
+          >
+            <span class="text-xs font-bold uppercase">Clear</span>
+          </button>
         </div>
 
-        <input 
-          v-model="searchQuery"
-          type="text" 
-          placeholder="Search articles" 
-          class="block w-full p-4 pl-10 text-sm text-slate-900 border border-slate-200 rounded-2xl bg-white 
-                focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none"
-        />
-
-        <button 
-          v-if="searchQuery" 
-          @click="searchQuery = ''"
-          class="absolute inset-y-0 right-0 flex items-center pr-4 text-slate-400 hover:text-slate-600"
-        >
-          <span class="text-xs font-bold uppercase">Clear</span>
-        </button>
+        <p class="mt-3 text-sm text-slate-500 dark:text-gray-100 italic">
+          Showing {{ filteredPosts.length }} of {{ formattedPosts.length }} articles
+        </p>
       </div>
-
-      <p class="mt-3 text-sm text-slate-500 dark:text-gray-100 italic">
-        Showing {{ filteredPosts.length }} of {{ formattedPosts.length }} articles
-      </p>
     </div>
-
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div v-for="post in filteredPosts" :key="post.guid">
-      </div>
-    </section>
 
     <div v-if="filteredPosts.length === 0 && formattedPosts.length > 0" class="text-center py-60">
       <p class="text-xl text-slate-400">No articles found matching "{{ searchQuery }}"</p>
@@ -139,12 +139,12 @@ onMounted(async () => {
       <p>Fetching latest articles...</p>
     </div>
 
-    <div v-else-if="error" class="error-message text-xl p-6 bg-red-200 text-red-800 rounded-md text-center h-30">
+    <div v-else-if="error" class="error-message text-xl p-6 w-80 my-8 lg:mt-4 self-center mx-auto bg-red-200 text-red-800 rounded-md text-center h-30">
       <p>Oops! {{ error }}</p>
-      <a :href="'https://medium.com/@adhamhidawy'" class="hover:underline text-blue-500" target="_blank">View on Medium directly</a>
+      <a :href="'https://medium.com/@al-roberts-computing'" class="hover:underline text-blue-500" target="_blank">View on Medium directly</a>
     </div>
 
-    <div v-else class="post-grid w-full grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+    <div v-else class="post-grid w-full grid gap-10 md:grid-cols-2 lg:grid-cols-3 mt-12">
       <div v-for="post in filteredPosts" :key="post.guid" class="post-card border border-gray-300 rounded-lg bg-[#ffeedd] transition-transform duration-500 hover:scale-110 shadow-lg">
         <div class="thumbnail mb-4">
           <img :src="post.featuredImage" :alt="post.title" class="w-full h-64 object-cover rounded-md" @error="(e) => (e.target as HTMLImageElement).src = DEFAULT_IMAGE"/>
