@@ -52,7 +52,7 @@ const router = createRouter({
     {
       path: '/:pathMatch(.*)*', // This catches all routes that don't match above
       name: 'not-found',
-      component: () => import('../views/PageNotFound.vue')
+      component: () => import('../views/PageNotFoundView.vue')
     }
   ]
 })
