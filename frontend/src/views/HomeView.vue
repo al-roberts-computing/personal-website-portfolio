@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, nextTick } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { faFlask, faMicrochip, faPeopleGroup, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faFlask, faMicrochip, faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,14 +93,19 @@ onUnmounted(() => {
           <span class="font-bold select-none"> Software Engineer </span>
           <FontAwesomeIcon :icon="faCode" />
         </div>
-        <div class="py-60 lg:pb-0 text-4xl md:text-5xl text-center bg-[url('/puzzle.jpg')] bg-cover">
-          <FontAwesomeIcon :icon="faPeopleGroup" />
-          <span class="font-bold select-none"> Team Player </span>
-          <FontAwesomeIcon :icon="faPeopleGroup" />
+        <div class="py-60 lg:pb-0 text-4xl md:text-5xl text-center bg-[url('/web-apps.jpg')] bg-cover">
+          <!-- 
+          Image by Thomas Ulrich from Pixabay
+          Available at: https://pixabay.com/photos/phone-display-apps-applications-292994/
+          Accessed: 1 February 2026
+          -->
+          <FontAwesomeIcon :icon="faGlobe" />
+          <span class="font-bold select-none"> Web Developer </span>
+          <FontAwesomeIcon :icon="faGlobe" />
         </div>
       </div>
     </section>
-    <section class="w-full h-auto px-6 py-6 lg:px-0 lg:h-screen border-t-[16px] border-solid border-amber-500 bg-[#ffeedd] dark:bg-[#2E4057] flex flex-col lg:flex-row items-center [&>div]:m-8
+    <section class="w-full h-auto p-6 lg:px-0 lg:h-screen border-t-[16px] border-solid border-amber-500 bg-[#ffeedd] dark:bg-[#2E4057] flex flex-col lg:flex-row items-center [&>div]:m-8
       lg:[&>div]:mx-20 lg:[&>div]:my-0 begin-float-up">
       <div class="bg-[#e69112] w-full lg:w-[50%] px-12 py-14 text-center rounded-xl main-info-text">
         <span class="text-white text-3xl xl:text-4xl leading-relaxed">I'm a versatile and proactive data professional who excels in data workflows and AI development. I specialise in technology, data, and practical engineering, and I’m passionate about making complicated ideas easy to understand.</span>
@@ -125,7 +130,9 @@ onUnmounted(() => {
           <span class="text-lg select-none">Google Cloud Data Analytics</span>
         </div>
       </div>
-      
+    </section>
+    <section class="w-full p-6">
+      ...
     </section>
   </main>
 </template>
