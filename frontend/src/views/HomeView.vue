@@ -13,8 +13,8 @@ onMounted(async () => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".begin-float-up",
-      start: "top bottom", 
-      end: "bottom top",
+      start: "top 80%", 
+      end: "top 20%",
       scrub: 3,
     }
   });
@@ -105,15 +105,15 @@ onUnmounted(() => {
         </div>
       </div>
     </section>
-    <section class="w-full h-auto p-6 lg:px-0 lg:h-screen border-t-[16px] border-solid border-amber-500 bg-[#ffeedd] dark:bg-[#2E4057] flex flex-col lg:flex-row items-center [&>div]:m-8
-      lg:[&>div]:mx-20 lg:[&>div]:my-0 begin-float-up">
+    <section class="w-full h-auto p-6 xl:px-0 overflow-hidden xl:h-screen bg-[#ffeedd] dark:bg-[#2E4057] flex flex-col xl:flex-row items-center [&>div]:m-8
+      xl:[&>div]:mx-20 xl:[&>div]:my-0 begin-float-up justify-between">
       <div class="bg-[#e69112] w-full lg:w-[50%] px-12 py-14 text-center rounded-xl main-info-text">
         <span class="text-white text-3xl xl:text-4xl leading-relaxed">I'm a versatile and proactive data professional who excels in data workflows and AI development. I specialise in technology, data, and practical engineering, and I’m passionate about making complicated ideas easy to understand.</span>
       </div>
-      <div class="self-center flex-2 w-auto overflow-hidden self-pic">
-        <img src="/self-portrait.jpg" alt="Self portrait of author." class="w-full rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
+      <div class="self-center w-auto self-pic">
+        <img src="/self-portrait.jpg" alt="Self portrait of author." class="lg:w-full min-w-64 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
       </div>
-      <div class="2xl:flex flex-col hidden py-14 overflow-hidden justify-between [&>div]:rounded-md [&>div]:text-white [&>div]:py-8 [&>div]:dark:bg-[#ffeedd] [&>div]:px-16 [&>div]:bg-[#e69112] [&>div]:text-center h-3/4">
+      <div class="flex w-auto flex-col py-14 justify-between [&>div]:rounded-md [&>div]:text-white [&>div]:xl:px-16 [&>div]:px-12 [&>div]:my-8 [&>div]:py-8 [&>div]:dark:bg-[#ffeedd] [&>div]:bg-[#e69112] [&>div]:text-center xl:h-3/4">
         <div class="msc-degree">
           <span class="text-2xl font-bold select-none">Distinction</span>
           <br/>
@@ -131,8 +131,19 @@ onUnmounted(() => {
         </div>
       </div>
     </section>
-    <section class="w-full p-6">
-      ...
+    <section class="w-full p-12 text-center">
+      <h2 class="text-6xl">Key Specialities</h2>
+      <div class="w-[70%] xl:w-[50%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center mt-16 mb-32 [&>div]:my-auto [&>div]:min-w-fit [&>div]:text-xl [&>div]:rounded-lg [&>div]:p-6 [&>div]:text-white [&>div]:bg-[#118ab2] dark:[&>div]:bg-[#145374]">
+        <div>Machine Learning Operations</div>
+        <div>Dynamic Model Development</div>
+        <div>Object-Oriented Programming</div>
+        <div>Statistical Modelling</div>
+        <div>Database Design and Implementation</div>
+        <div>Natural Language Processing</div>
+        <div>Neural Networks</div>
+        <div>Data Analysis</div>
+        <div>System Architecture</div>
+      </div>
     </section>
   </main>
 </template>
