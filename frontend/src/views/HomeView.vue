@@ -113,7 +113,7 @@ onUnmounted(() => {
       <div class="self-center w-auto self-pic">
         <img src="/self-portrait.jpg" alt="Self portrait of author." class="lg:w-full min-w-64 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
       </div>
-      <div class="flex w-auto flex-col py-14 justify-between [&>div]:rounded-md [&>div]:text-white [&>div]:xl:px-16 [&>div]:px-12 [&>div]:my-8 [&>div]:py-8 [&>div]:dark:bg-[#ffeedd] [&>div]:bg-[#e69112] [&>div]:text-center xl:h-3/4">
+      <div class="flex w-auto flex-col py-14 justify-between [&>div]:rounded-md [&>div]:text-white [&>div]:xl:px-16 [&>div]:px-12 [&>div]:my-8 [&>div]:py-8 [&>div]:bg-[#e69112] [&>div]:text-center xl:h-3/4">
         <div class="msc-degree">
           <span class="text-2xl font-bold select-none">Distinction</span>
           <br/>
