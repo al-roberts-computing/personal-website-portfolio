@@ -23,27 +23,37 @@ const posts = ref<MediumPost[]>([]);
 const formattedPosts = computed(() => {
   return posts.value.map(post => {
     const parser = new DOMParser();
-    const doc = parser.parseFromString(post.description, 'text/html');
+    // 1. Check BOTH description and content (Medium puts full HTML in content)
+    const combinedHtml = post.content || post.description;
+    const doc = parser.parseFromString(combinedHtml, 'text/html');
 
-    const imgElement = doc.querySelector('.medium-feed-image img') as HTMLImageElement;
+    // 2. Try various selectors used by Medium/rss2json
+    const imgElement = doc.querySelector('img'); 
+    
+    // 3. Fallback logic: 
+    // Priority: 1. Found <img> tag | 2. post.thumbnail | 3. DEFAULT_IMAGE
     const featuredImage = imgElement ? imgElement.src : (post.thumbnail || DEFAULT_IMAGE);
 
-    const snippetElement = doc.querySelector('.medium-feed-snippet');
     let excerpt = '';
-
-    const cleanCategories = (post.categories || []).map(cat => 
-      cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
-    );
+    const snippetElement = doc.querySelector('.medium-feed-snippet');
     
     if (snippetElement) {
       excerpt = snippetElement.textContent || '';
     } else {
+      // Create a temporary div to strip HTML tags for the excerpt
       const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = post.description;
-      const imgInDiv = tempDiv.querySelector('.medium-feed-image');
-      if (imgInDiv) imgInDiv.remove();
+      tempDiv.innerHTML = combinedHtml;
+      
+      // Remove any images or figures so they don't leave artifacts in text
+      const figures = tempDiv.querySelectorAll('figure, img');
+      figures.forEach(f => f.remove());
+      
       excerpt = tempDiv.textContent?.slice(0, 150) + '...' || '';
     }
+
+    const cleanCategories = (post.categories || []).map(cat => 
+      cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+    );
 
     return {
       ...post,
