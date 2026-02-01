@@ -1,11 +1,53 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted, nextTick } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 import { faFlask, faMicrochip, faPeopleGroup, faCode } from '@fortawesome/free-solid-svg-icons';
 
+gsap.registerPlugin(ScrollTrigger);
+
 onMounted(async () => {
-  const { gsap } = await import("gsap");
-})
+  await nextTick();
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".begin-float-up",
+      start: "top bottom", 
+      end: "bottom top",
+      scrub: 3,
+    }
+  });
+
+  tl.fromTo(".main-info-text", 
+    { opacity: 0, y: 100 },
+    { opacity: 1, y: 0, ease: "power1.inOut" }
+  )
+  .fromTo(".self-pic", 
+    { opacity: 0, y: 150 },
+    { opacity: 1, y: 0, ease: "power1.inOut" },
+    "+=0.5" 
+  )
+  .fromTo(".msc-degree", 
+    { opacity: 0, y: 100 },
+    { opacity: 1, y: 0, ease: "power1.inOut" },
+    "+=0.5"
+  )
+  .fromTo(".bsc-degree", 
+    { opacity: 0, y: 100 },
+    { opacity: 1, y: 0, ease: "power1.inOut" },
+    "+=0.5"
+  )
+  .fromTo(".google-certificate", 
+    { opacity: 0, y: 100 },
+    { opacity: 1, y: 0, ease: "power1.inOut" },
+    "+=0.5"
+  );
+});
+
+onUnmounted(() => {
+  ScrollTrigger.getAll().forEach(t => t.kill());
+});
 </script>
 
 <template>
@@ -52,20 +94,36 @@ onMounted(async () => {
           <FontAwesomeIcon :icon="faCode" />
         </div>
         <div class="py-60 lg:pb-0 text-4xl md:text-5xl text-center bg-[url('/puzzle.jpg')] bg-cover">
-          <!-- <img src="/selfie.jpg" alt="Selfie of author." class="w-[23rem] h-[28rem] m-auto my-4 rounded-full"> -->
           <FontAwesomeIcon :icon="faPeopleGroup" />
           <span class="font-bold select-none"> Team Player </span>
           <FontAwesomeIcon :icon="faPeopleGroup" />
         </div>
       </div>
     </section>
-    <section class="w-full h-auto px-6 py-6 lg:px-0 lg:h-screen border-t-[16px] border-solid border-amber-500 bg-[#ffeedd] dark:bg-[#2E4057] flex flex-col lg:flex-row justify-between items-center [&>div]:m-8
-      lg:[&>div]:mx-20 lg:[&>div]:my-0 &>div]:w-full">
-      <div class="bg-[#e69112] w-full lg:w-[50%] px-12 py-10 text-center rounded-xl">
-        <span class="text-white text-3xl lg:text-5xl leading-relaxed">I'm a data professional focused on data analysis and AI development.</span>
+    <section class="w-full h-auto px-6 py-6 lg:px-0 lg:h-screen border-t-[16px] border-solid border-amber-500 bg-[#ffeedd] dark:bg-[#2E4057] flex flex-col lg:flex-row items-center [&>div]:m-8
+      lg:[&>div]:mx-20 lg:[&>div]:my-0 begin-float-up">
+      <div class="bg-[#e69112] w-full lg:w-[50%] px-12 py-14 text-center rounded-xl main-info-text">
+        <span class="text-white text-3xl xl:text-4xl leading-relaxed">I'm a versatile and proactive data professional who excels in data workflows and AI development. I specialise in technology, data, and practical engineering, and I’m passionate about making complicated ideas easy to understand.</span>
       </div>
-      <div class="text-center hidden lg:block lg:w-[50%] overflow-hidden">
-        <img src="/self-portrait.jpg" alt="Self portrait of author." class="w-auto max-w-md h-1/2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500">
+      <div class="self-center flex-2 w-auto overflow-hidden self-pic">
+        <img src="/self-portrait.jpg" alt="Self portrait of author." class="w-full rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"/>
+      </div>
+      <div class="2xl:flex flex-col hidden py-14 overflow-hidden justify-between [&>div]:rounded-md [&>div]:text-white [&>div]:py-8 [&>div]:dark:bg-[#ffeedd] [&>div]:px-16 [&>div]:bg-[#e69112] [&>div]:text-center h-3/4">
+        <div class="msc-degree">
+          <span class="text-2xl font-bold select-none">Distinction</span>
+          <br/>
+          <span class="text-lg select-none">MSc Big Data Analytics</span>
+        </div>
+        <div class="bsc-degree">
+          <span class="text-2xl font-bold select-none">1st Class</span>
+          <br/>
+          <span class="text-lg select-none">BSc (Hons) Computer and Data Science</span>
+        </div>
+        <div class="google-certificate">
+          <span class="text-2xl font-bold select-none">5-month Course</span>
+          <br/>
+          <span class="text-lg select-none">Google Cloud Data Analytics</span>
+        </div>
       </div>
       
     </section>
