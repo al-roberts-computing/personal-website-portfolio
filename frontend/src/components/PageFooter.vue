@@ -12,7 +12,7 @@ import { RouterLink } from 'vue-router';
                 <span class="text-xl text-gray-100">Contact Me</span>
                 <ul class="[&>li]:py-1 [&>li>a:hover]:text-red-400 text-lg text-black font-bold [&>li>a:visited]:text-pink-600 [&>li>a]:underline [&>li>a]:text-blue-100">
                     <li>
-                        Email: <a href="mailto:a.roberts539@outlook.com">a.roberts539@outlook.com</a>
+                        Email: <a href="mailto:contact-me@alexander-roberts.me">contact-me@alexander-roberts.me</a>
                     </li>
                     <li>
                         LinkedIn: <a href="https://www.linkedin.com/in/alexander-roberts-computing" target='__blank'>www.linkedin.com/in/alexander-roberts-computing</a>

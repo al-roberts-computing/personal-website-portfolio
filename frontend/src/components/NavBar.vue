@@ -75,7 +75,7 @@ onMounted(async () => {
             <!-- social media icons -->
             <ul class="flex items-center justify-between ml-10 w-40 text-md text-4xl">
                 <li class="select-none">
-                    <a class="block hover:text-orange-500" href="mailto:a.roberts539@outlook.com" title="Email me">
+                    <a class="block hover:text-orange-500" href="mailto:contact-me@alexander-roberts.me" title="Email me">
                         <FontAwesomeIcon :icon="faEnvelope" />
                     </a>
                 </li>
