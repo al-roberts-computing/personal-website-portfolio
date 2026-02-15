@@ -24,7 +24,7 @@ onMounted(async () => {
     const data = await response.json();
     
     // Optional: Filter out forks or specific repos you don't want to show
-    repos.value = data.filter((repo: any) => !repo.fork && repo.description);
+    repos.value = data.filter((repo: any) => !repo.fork && repo.description && repo.language);
   } catch (err) {
     error.value = err instanceof Error ? err.message : 'An unknown error occurred';
     console.error('Error fetching GitHub repos:', err);
